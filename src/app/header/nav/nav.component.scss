@@ -1,0 +1,40 @@
+.container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+
+    &__search input{
+       
+        border-radius: 10px;
+    }
+    .search{
+        width: 600px;
+        height: 16px;
+        padding: 10px;
+        background-color: #1c1c1e;
+        text-transform: uppercase;
+        outline: none;
+        color: #eee;
+        
+    }
+
+    &_elements{
+        display: flex;
+        
+        width: 100%;
+        justify-content: space-between;
+        
+
+        li{
+            list-style-type: none;
+           
+        }
+    }
+}
+
+
+.mat-grid-tile {
+    background: lightblue;
+  }

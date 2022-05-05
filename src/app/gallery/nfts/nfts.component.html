@@ -1,0 +1,21 @@
+<app-main [nftId]="ItemClicked">
+    
+</app-main>
+<div class="container">
+    <div class="collectionCard" *ngFor="let data of nftData" 
+    (click)="getId(data.token_id,data.image_url,data.name)">
+        <img src="{{data.image_url}}" alt="nf img" >
+        <div class="details">
+            <div class="name">
+                {{data.name}} 
+                <div class="id">#. {{data.token_id}}</div>
+            </div>
+        </div>
+    
+        <div class="priceContainer">
+            <img src="assets/assets/weth.png" alt="symbol" class="weithImage">
+            <div class="price">{{data.traits[0]?.value}}</div>
+        </div>
+    </div>
+</div>
+
