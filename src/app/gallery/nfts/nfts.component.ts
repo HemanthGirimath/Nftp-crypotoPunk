@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CardData } from 'src/app/card-data';
 
 @Component({
   selector: 'app-nfts',
@@ -9,10 +8,10 @@ import { CardData } from 'src/app/card-data';
 
 export class NftsComponent implements OnInit {
   nftData:any =[];
-  ItemClicked:CardData[] = []; 
+  ItemClicked:any; 
  
   getdata(){
-    fetch('https://testnets-api.opensea.io/api/v1/assets?asset_contract_address=0x617d411DE5a4D5b668EBAa22Edc7bCdbb88285c4&order_direction=desc&offset=0&limit=5')
+    fetch('https://testnets-api.opensea.io/api/v1/assets?asset_contract_address=0xa41B58Adcd09C7555941Ad2c8eA8e0a10F2Fa425&order_direction=asc&offset=0&limit=6')
    .then(response =>response.json())
    .then(response =>{
      const data = response.assets;
@@ -23,7 +22,7 @@ export class NftsComponent implements OnInit {
   }
 
   getId(data:any){
-    this.ItemClicked.push(data);
+    this.ItemClicked = data;
     console.log("sending data", this.ItemClicked);
   }
   

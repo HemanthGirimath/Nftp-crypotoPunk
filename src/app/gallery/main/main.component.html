@@ -1,35 +1,37 @@
 <div class="main" >
     <div class="mainContent">
         <div class="punkHighlight" >
-            <div class="ounkContainer">
-                <img class="selectedPunk" src="" alt="selectedPunk img">
+            <div class="punkContainer">
+                <img class="selectedPunk" [src]="nftId?.image_url" alt="selectedPunk img">
             </div>
         </div>
         <div class="punkDetails">
-            <div class="title"></div>
-            <span class="itemNumber"></span>
-        </div>
-
-        <div class="owner">
-            <div class="ownerImageContainer">
-                <img src="" alt="">
+            <div class="lol">
+                <div class="title">{{nftId?.name}}</div>
+                <span class="itemNumber">.# {{nftId?.token_id}}</span>
             </div>
-
-            <div class="ownerDetails">
-                <div class="ownerNameAndHandel">
-                    <div>0x3EB49a28dB9aC3fD52c56c0256F1Fa809923245D</div>
-                    <div class="ownerHandle">@Hemanth G G</div>
+            <div class="owner">
+                <div class="ownerImageContainer">
+                    <img [src]="nftId?.owner.profile_img_url" alt="">
                 </div>
-                <div class="ownerLink">
-                    <img src="assets/assets/owner/instagram.png" alt="insta logo">
-                </div>
-                <div class="ownerLink">
-                    <img src="assets/assets/owner/twitter.png" alt="twitter logo">
-                </div>
-                <div class="ownerLink">
-                    <img src="assets/assets/owner/more.png" alt="owner Link">
+    
+                <div class="ownerDetails">
+                    <div class="ownerNameAndHandel">
+                        <div>{{nftId?.owner.address}}</div>
+                        <div class="ownerHandle">@Hemanth G G</div>
+                    </div>
+                    <div class="ownerLink">
+                        <img src="assets/assets/owner/instagram.png" alt="insta logo">
+                    </div>
+                    <div class="ownerLink">
+                        <img src="assets/assets/owner/twitter.png" alt="twitter logo">
+                    </div>
+                    <div class="ownerLink">
+                        <img src="assets/assets/owner/more.png" alt="owner Link">
+                    </div>
                 </div>
             </div>
         </div>
+        
     </div>
 </div>

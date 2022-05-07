@@ -16,6 +16,8 @@ export class MainComponent implements OnInit,OnChanges {
   }
 
   ngOnChanges(change: SimpleChanges) {
-    
+    if (change['nftId']) {
+      this.nftId = change['nftId'].currentValue;
+    }
   }
 }
